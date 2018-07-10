@@ -123,6 +123,8 @@
     - bootstrap-os
     - resolvconf
 
+- import_tasks: repo.yml
+
 - name: Update package management cache (YUM)
   yum:
     update_cache: yes
