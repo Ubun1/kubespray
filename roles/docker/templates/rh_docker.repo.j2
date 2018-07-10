@@ -2,7 +2,7 @@
 name=Docker-CE Repository
 baseurl={{ docker_rh_repo_base_url }}
 enabled=1
-gpgcheck=1
+gpgcheck=0
 gpgkey={{ docker_rh_repo_gpgkey }}
 {% if http_proxy is defined %}proxy={{ http_proxy }}{% endif %}
 
@@ -10,6 +10,6 @@ gpgkey={{ docker_rh_repo_gpgkey }}
 name=Docker-Engine Repository
 baseurl={{ dockerproject_rh_repo_base_url }}
 enabled=1
-gpgcheck=1
+gpgcheck=0
 gpgkey={{ dockerproject_rh_repo_gpgkey }}
 {% if http_proxy is defined %}proxy={{ http_proxy }}{% endif %}
