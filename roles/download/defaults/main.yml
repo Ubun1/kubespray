@@ -62,13 +62,15 @@ kubeadm_checksum: 0000478fc59a24ec1727de744188d13c4d702a644954132efa9d9954371b35
 #7e1169bbbeed973ab402941672dec957638dea5952a1e8bc89a37d5e709cc4b4
 vault_binary_checksum: 3c4d70ba71619a43229e65c67830e30e050eab7a81ac6b28325ff707e5914188
 
+# local repo
+local_repo: "dhub.c2.croc.ru/kubernetes/"
 # Containers
-etcd_image_repo: "quay.io/coreos/etcd"
-etcd_image_tag: "{{ etcd_version }}"
-flannel_image_repo: "quay.io/coreos/flannel"
-flannel_image_tag: "{{ flannel_version }}"
-flannel_cni_image_repo: "quay.io/coreos/flannel-cni"
-flannel_cni_image_tag: "{{ flannel_cni_version }}"
+etcd_image_repo: "{{ local_repo }}/etcd" #  +
+etcd_image_tag: "{{ etcd_version }}" # +
+flannel_image_repo: "{{ local_repo }}/flannel" # +
+flannel_image_tag: "{{ flannel_version }}" # +
+flannel_cni_image_repo: "{{ local_repo}}/flannel-cni" # +
+flannel_cni_image_tag: "{{ flannel_cni_version }}" # +
 calicoctl_image_repo: "quay.io/calico/ctl"
 calicoctl_image_tag: "{{ calico_ctl_version }}"
 calico_node_image_repo: "quay.io/calico/node"
@@ -95,11 +97,11 @@ istio_sidecar_initializer_image_repo: docker.io/istio/sidecar_initializer
 istio_sidecar_initializer_image_tag: "{{ istio_version }}"
 istio_statsd_image_repo: prom/statsd-exporter
 istio_statsd_image_tag: latest
-hyperkube_image_repo: "gcr.io/google-containers/hyperkube"
-hyperkube_image_tag: "{{ kube_version }}"
-pod_infra_image_repo: "gcr.io/google_containers/pause-amd64"
-pod_infra_image_tag: "{{ pod_infra_version }}"
-install_socat_image_repo: "xueshanf/install-socat"
+hyperkube_image_repo: "{{ local_repo}}/google-containers/hyperkube" # +
+hyperkube_image_tag: "{{ kube_version }}" # +
+pod_infra_image_repo: "{{ local_repo }}/pause-amd64" # +
+pod_infra_image_tag: "{{ pod_infra_version }}" # + 
+install_socat_image_repo: "{{ local_repo }}/install-socat" # +
 install_socat_image_tag: "latest"
 netcheck_version: "v1.2.2"
 netcheck_agent_img_repo: "mirantis/k8s-netchecker-agent"
@@ -118,14 +120,14 @@ contiv_etcd_init_image_repo: "ferest/etcd-initer"
 contiv_etcd_init_image_tag: latest
 cilium_image_repo: "docker.io/cilium/cilium"
 cilium_image_tag: "{{ cilium_version }}"
-nginx_image_repo: nginx
-nginx_image_tag: 1.13
+nginx_image_repo: "{{ local_repo}}/nginx" # +
+nginx_image_tag: 1.13 # +
 dnsmasq_version: 2.78
 dnsmasq_image_repo: "andyshinn/dnsmasq"
 dnsmasq_image_tag: "{{ dnsmasq_version }}"
-kubedns_version: 1.14.10
-kubedns_image_repo: "gcr.io/google_containers/k8s-dns-kube-dns-amd64"
-kubedns_image_tag: "{{ kubedns_version }}"
+kubedns_version: 1.14.10 # +
+kubedns_image_repo: "{{ local_repo}}/k8s-dns-kube-dns-amd64" # +
+kubedns_image_tag: "{{ kubedns_version }}" # +
 coredns_version: 1.1.2
 coredns_image_repo: "docker.io/coredns/coredns"
 coredns_image_tag: "{{ coredns_version }}"
@@ -136,11 +138,11 @@ dnsmasq_sidecar_image_tag: "{{ kubedns_version }}"
 dnsmasqautoscaler_version: 1.1.2
 dnsmasqautoscaler_image_repo: "gcr.io/google_containers/cluster-proportional-autoscaler-amd64"
 dnsmasqautoscaler_image_tag: "{{ dnsmasqautoscaler_version }}"
-kubednsautoscaler_version: 1.1.2
-kubednsautoscaler_image_repo: "gcr.io/google_containers/cluster-proportional-autoscaler-amd64"
-kubednsautoscaler_image_tag: "{{ kubednsautoscaler_version }}"
-test_image_repo: busybox
-test_image_tag: latest
+kubednsautoscaler_version: 1.1.2 # +
+kubednsautoscaler_image_repo: "{{ local_repo }}/cluster-proportional-autoscaler-amd64" # +
+kubednsautoscaler_image_tag: "{{ kubednsautoscaler_version }}" # +
+test_image_repo: "{{ local_repo }}/busybox" # +
+test_image_tag: latest # +
 elasticsearch_version: "v5.6.4"
 elasticsearch_image_repo: "k8s.gcr.io/elasticsearch"
 elasticsearch_image_tag: "{{ elasticsearch_version }}"
