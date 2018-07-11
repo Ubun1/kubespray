@@ -9,7 +9,6 @@
   when: bootstrap_os == "coreos"
 
 - import_tasks: bootstrap-centos.yml
-  when: bootstrap_os == "centos"
 
 - import_tasks: bootstrap-opensuse.yml
   when: bootstrap_os == "opensuse"

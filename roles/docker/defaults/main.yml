@@ -27,7 +27,7 @@ yum_repo_dir: /etc/yum.repos.d
 docker_yum_conf: /etc/yum_docker.conf
 
 # CentOS/RedHat docker-ce repo
-docker_rh_repo_base_url: 'http://repo.cloud.croc.ru/pub/repos/docker/el7'
+docker_rh_repo_base_url: 'https://repo.cloud.croc.ru/pub/repos/docker/el7'
 # 'https://download.docker.com/linux/centos/7/$basearch/stable'
 docker_rh_repo_gpgkey: 'https://download.docker.com/linux/centos/gpg'
 # Ubuntu docker-ce repo
@@ -37,7 +37,7 @@ docker_ubuntu_repo_gpgkey: 'https://download.docker.com/linux/ubuntu/gpg'
 docker_debian_repo_base_url: "https://download.docker.com/linux/debian"
 docker_debian_repo_gpgkey: 'https://download.docker.com/linux/debian/gpg'
 # dockerproject repo
-dockerproject_rh_repo_base_url: 'http://repo.cloud.croc.ru/pub/repos/docker/el7'
+dockerproject_rh_repo_base_url: 'https://repo.cloud.croc.ru/pub/repos/docker/el7'
 #'https://yum.dockerproject.org/repo/main/centos/7'
 dockerproject_rh_repo_gpgkey: 'https://yum.dockerproject.org/gpg'
 dockerproject_apt_repo_base_url: 'https://apt.dockerproject.org/repo'
