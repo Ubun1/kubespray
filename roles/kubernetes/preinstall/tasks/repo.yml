@@ -1,7 +1,0 @@
----
-
-- name: create /etc/yum.repos.d/c2.repo
-  template: src=c2.repo.j2 dest=/etc/yum.repos.d/c2.repo
-  tags:
-    - repos
-
