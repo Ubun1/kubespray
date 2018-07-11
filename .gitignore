@@ -25,6 +25,7 @@ __pycache__/
 # Distribution / packaging
 .Python
 inventory/*/artifacts/
+inventory/*
 env/
 build/
 credentials/
